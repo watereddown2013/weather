@@ -1,3 +1,8 @@
+#### slr 2013
+# this runs as a scheduled task to populate the 
+# sqlite3 database with new values daily.
+####
+
 require 'sqlite3'
 require 'rest-client'
 require 'json'
@@ -19,7 +24,7 @@ range = ['min', 'max']
 
 
 				begin
-				db = SQLite3::Database.open "C:\\Sites\\sqlite3\\weatherIN.db"
+				db = SQLite3::Database.open "C:\\Sites\\sqlite3\\weather.db"
 				puts db.get_first_value 'SELECT SQLITE_VERSION()'
 
 		
