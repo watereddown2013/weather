@@ -88,7 +88,7 @@ site.each do |s|
 		#########################################################
 
 		elsif s == 'noaa'
-			url_n = 'http://graphical.weather.gov/xml/sample_products/browser_interface/ndfdXMLclient.php?zipCodeList=97213&maxt=maxt&mint=mint'
+			url_n = 'http://graphical.weather.gov/xml/sample_products/browser_interface/ndfdXMLclient.php?zipCodeList=<<zip>>&maxt=maxt&mint=mint'
 			xmlDoc = Nokogiri::XML(RestClient.get(url_n))	
 				
 			temp = '//temperature[name="Daily ' + (r.capitalize) + 'imum Temperature"]/value/text()'
