@@ -61,7 +61,7 @@ site.each do |s|
 		## fetch data from forecast.io and store in array week.
 		if s == 'forecast'
 
-			url_f = 'https://api.forecast.io/forecast/50b4441c0427316a64137eec10dabd77/45.5381938,-122.6000136?daily'
+			url_f = 'https://api.forecast.io/forecast/<<key>>/<<zip>>?daily'
 			jsonData =Crack::JSON.parse(RestClient.get(url_f))
 	
 			@daily = jsonData["daily"]["data"]
